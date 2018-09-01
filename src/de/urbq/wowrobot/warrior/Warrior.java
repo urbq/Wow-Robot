@@ -15,6 +15,7 @@ public abstract class Warrior extends de.urbq.wowrobot.types.Class {
 	public Warrior() {
 		super();
 		skills = new HashMap<String, Observable>();
+		rotations = new HashMap<String, Rotation>();
 
 		skills.put(WarriorSkillNames.EXECUTE,
 				new Skill(WarriorSkillNames.EXECUTE, new Color(171, 255, 0), new Position(15, 165), KeyEvent.VK_F));
@@ -26,11 +27,6 @@ public abstract class Warrior extends de.urbq.wowrobot.types.Class {
 				new SkillState(WarriorSkillNames.RAGE_BELOW_40, new Color(225, 234, 255), new Position(15, 225)));
 		skills.put(WarriorSkillNames.RAGE_ABOVE_90,
 				new SkillState(WarriorSkillNames.RAGE_ABOVE_90, new Color(225, 234, 255), new Position(45, 225)));
-
-		rotations = new HashMap<String, Rotation>();
-		
-		rotations.put(WarriorRotationNames.FURY_ICY_VEINS_SINGLE_TARGET, new FuryIcyVeinsSingleTarget());
-		rotations.put(WarriorRotationNames.FURY_SINGLE_TARGET, new FurySingleTarget());
 	}
 
 }

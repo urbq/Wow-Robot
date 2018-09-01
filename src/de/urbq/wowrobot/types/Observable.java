@@ -22,15 +22,15 @@ public class Observable {
 	}
 	
 	public void check(Robot robot) {
-		System.out.println("Checking " + this.name);
+//		System.out.println("Checking " + this.name);
 		Color foundColor = robot.getPixelColor(this.position.getX(), this.position.getY());
-		System.out.println("Found color " + foundColor.toString());
+//		System.out.println("Found color " + foundColor.toString());
 		if (foundColor.equals(this.color)) {
 			this.state = true;
-			System.out.println("That's a match");
+//			System.out.println("That's a match");
 		} else {
 			this.state = false;
-			System.out.println("That's not a match :(");
+//			System.out.println("That's not a match :(");
 		}
 	}
 

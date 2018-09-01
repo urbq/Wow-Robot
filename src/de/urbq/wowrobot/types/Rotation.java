@@ -6,7 +6,12 @@ import java.util.Map;
 
 public abstract class Rotation implements IRotation {
 
-	protected Map<String, Skill> skills;
+	protected Map<String, Observable> skills;	
+
+	public Rotation(Map<String, Observable> skills) {
+		super();
+		this.skills = skills;
+	}
 
 	public void start() {
 		try {
@@ -21,7 +26,7 @@ public abstract class Rotation implements IRotation {
 	}
 
 	public void doChecks(Robot robot) {
-		for (Skill skill : skills.values()) {
+		for (Observable skill : skills.values()) {
 			skill.check(robot);
 		}
 	}

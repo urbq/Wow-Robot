@@ -11,7 +11,7 @@ public class FuryWarrior extends Warrior {
 
 	public FuryWarrior() {
 		super();
-		
+
 		skills.put(WarriorSkillNames.RECKLESSNESS,
 				new Skill(WarriorSkillNames.RECKLESSNESS, new Color(255, 0, 9), new Position(15, 15), KeyEvent.VK_F5));
 		skills.put(WarriorSkillNames.RECKLESSNESS_BELOW_30,
@@ -36,7 +36,7 @@ public class FuryWarrior extends Warrior {
 				new Skill(WarriorSkillNames.DRAGONROAR, new Color(0, 255, 111), new Position(15, 135), KeyEvent.VK_4));
 		skills.put(WarriorSkillNames.DRAGONROAR_BELOW_1,
 				new SkillState(WarriorSkillNames.DRAGONROAR_BELOW_1, new Color(0, 255, 111), new Position(45, 135)));
-		
+
 		skills.put(WarriorSkillNames.ENRAGE,
 				new Skill(WarriorSkillNames.ENRAGE, new Color(255, 0, 247), new Position(15, 255), 0));
 
@@ -45,6 +45,8 @@ public class FuryWarrior extends Warrior {
 		skills.put(WarriorSkillNames.SIEGEBREAKER_BELOW_1,
 				new SkillState(WarriorSkillNames.SIEGEBREAKER_BELOW_1, new Color(0, 0, 0), new Position(45, 315)));
 
+		rotations.put(WarriorRotationNames.FURY_ICY_VEINS_SINGLE_TARGET, new FuryIcyVeinsSingleTarget(skills));
+		rotations.put(WarriorRotationNames.FURY_SINGLE_TARGET, new FurySingleTarget(skills));
 	}
-	
+
 }
